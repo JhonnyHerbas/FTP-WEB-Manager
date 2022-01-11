@@ -1,0 +1,33 @@
+Instrucciones:
+
+Paso 1:
+Mover los codigos dos codigos formulario.c y leerCo.c a la carpeta de linux
+Open SUSE 15 en la direccion /srv/www/cgi-bin.
+
+Paso 2:
+Compilar los dos codigos como se muestra a continuacion:
+gcc formulario.c -o formulario
+gcc leerCo.c -o leerCo
+Observacion:
+Si al compilar el archivo leerCo.c sale una especie de error revisar la lista
+de archivos que contiene la carpeta y si esta el ejecutable leerCo ignorar el
+error.
+
+Una vez compilados cambiamos los permisos de acceso con los siguientes comandos
+chmod ugo+s formulario
+chmod ugo+s leerCo
+
+Paso 3:
+Ejecutar desde un navegador el archivo con la direccion:
+localhost/cgi-bin/formulario
+
+Instrucciones de Uso:
+Una vez insertado la direccion en el navegador se mostrara el nombre de las
+variables, su estado (activado o desactivado) que representan si la variable
+esta comentada o no, seguido de los valores actuales de cada variable que estan
+actualmente en el archivo de configuracion, junto a todo esto se observara una
+descripcion de lo que realiza o implica la variable.
+
+Para reiniciar el servicio presionar el boton send que esta al final de la pagina,
+el boton igual sirve para guardar y almacenar los cambios que se realize en la pagina.
+para regresar a la pagina del formulario inserte la misma direccion del Paso 3
